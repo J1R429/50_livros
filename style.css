@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #5d267b;
+    color: #F6F6F6;
+}
+
+.apresentacao{
+    display: flex;
+    margin:10% 15%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao_conteudo{
+    width: 593px; 
+   /* height: 572px;*/
+    text-align: justify;
+    flex-direction: column;
+    gap: 40px;
+    margin-right: 10px;
+}
+
+.apresentacao_conteudo_titulo{
+    font-size: 30px;
+}
+
+.apresentacao_conteudo_texto{
+    font-size: 20px;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botoes_1{
+    background-color: #F7E911;
+    color: #000000;
+    width: 150px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.imagemPrincipal{
+    width:280px;
+    height:300px;
+    margin-left: 40px;
+}
+
+
+.nomeIgreja{
+    color: #28E83B;
+}
+
+.listaLivros{
+    box-sizing: border-box;
+    display: flex; /* Exibe os livros lado a lado */
+    flex-wrap: wrap; /* Faz a quebra de linha quando necessário */
+    justify-content: center; /* Centraliza os livros horizontalmente */
+    margin: 10px;
+}
+
+.livro {
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 10px; /* Espaçamento entre os livros */
+}
+
+.livro img {
+    width: 150px; /* Defina o tamanho da imagem como desejado */
+    height: 220px;
+}
+
+.nome-livro {
+    font-size: 14px; /* Define o tamanho da fonte do nome do livro */
+    margin-top: 5px; /* Adiciona um espaço entre a imagem e o nome do livro */
+    width: 150px;
+    color: #F6F6F6;
+}
+
+
