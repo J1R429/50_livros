@@ -17,11 +17,11 @@ body{
     margin:10% 15%;
     align-items: center;
     justify-content: space-between;
+    width: 80%;
 }
 
 .apresentacao_conteudo{
-    width: 593px; 
-   /* height: 572px;*/
+    width: 593px;    /* height: 572px;*/
     text-align: justify;
     flex-direction: column;
     gap: 40px;
@@ -72,35 +72,42 @@ body{
     display: flex; /* Exibe os livros lado a lado */
     flex-wrap: wrap; /* Faz a quebra de linha quando necessário */
     justify-content: center; /* Centraliza os livros horizontalmente */
-    margin: 10px;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os livros */
+    margin: 0 auto; /* Centraliza o container de livros */
+    max-width: 80%; /* Define a largura máxima para os livros */
 }
 
 .livro {
     text-align: center; /* Centraliza o conteúdo */
+    flex-basis: calc(25% - 20px); /* Define a largura de cada livro com margens */
     margin: 10px; /* Espaçamento entre os livros */
 }
 
 .livro img {
-    width: 150px; /* Defina o tamanho da imagem como desejado */
-    height: 220px;
+    width: 100%; /* Defina o tamanho da imagem como desejado */
+    height: auto;
 }
 
 .nome-livro {
     font-size: 14px; /* Define o tamanho da fonte do nome do livro */
     margin-top: 5px; /* Adiciona um espaço entre a imagem e o nome do livro */
-    width: 150px;
     color: #F6F6F6;
+}
+
+@media screen and (max-width: 600px) {
+    .livros-container {
+        justify-content: space-between; /* Alinha os livros lado a lado */
+    }
 }
 
 .quantidade{
     gap: 15px;
     color: #000000;
     border: 3px solid #F7E911;
-    display: flex;
-    /*border-radius: 10px;*/
+    display: flex;    /*border-radius: 10px;*/
     text-align: center;
-    font-size: 20px;
-    /*font-weight: 600;*/
+    font-size: 20px;    /*font-weight: 600;*/
     padding: 10px 0;
     text-decoration: none;   
 }
