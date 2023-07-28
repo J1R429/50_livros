@@ -5,6 +5,7 @@
 
 
 body{
+    width: 100%;
     height: 100vh;
     box-sizing: border-box;
     background-color: #5d267b;
@@ -89,6 +90,19 @@ body{
     margin-top: 5px; /* Adiciona um espaço entre a imagem e o nome do livro */
     width: 150px;
     color: #F6F6F6;
+}
+
+.quantidade{
+    gap: 15px;
+    color: #000000;
+    border: 3px solid #F7E911;
+    display: flex;
+    /*border-radius: 10px;*/
+    text-align: center;
+    font-size: 20px;
+    /*font-weight: 600;*/
+    padding: 10px 0;
+    text-decoration: none;   
 }
 
 .rodape{
