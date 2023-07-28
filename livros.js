@@ -99,16 +99,19 @@ function selecionados() {
     if (quantidadeLivrosSelecionados === 0) {
         mensagem.textContent = "Selecione pelo menos um livro para começar.";
     } 
-    else if (quantidadeLivrosSelecionados === 10){
+    else if (quantidadeLivrosSelecionados <= 10){
         mensagem.textContent = 'Você já selecionou ${quantidadeLivrosSelecionados} livros. Continue lendo!';
     }
-    else if (quantidadeLivrosSelecionados === 20){
+    else if (quantidadeLivrosSelecionados <= 20){
         mensagem.textContent = 'Você já selecionou ${quantidadeLivrosSelecionados} livros. Aposto que você já percebeu mudanças, continue lendo!';
     }
-    else if (quantidadeLivrosSelecionados === 30){
+    else if (quantidadeLivrosSelecionados <= 30){
         mensagem.textContent = 'Você já selecionou ${quantidadeLivrosSelecionados} livros. Não desista, continue lendo!';
     }
-    else if (quantidadeLivrosSelecionados === 40){
+    else if (quantidadeLivrosSelecionados <= 40){
+        mensagem.textContent = 'Você já selecionou ${quantidadeLivrosSelecionados} livros. Nossa que maravilha, continue lendo!';
+    }
+    else if (quantidadeLivrosSelecionados < 50){
         mensagem.textContent = 'Você já selecionou ${quantidadeLivrosSelecionados} livros. Você está quase lá, continue lendo!';
     }
     else {
