@@ -21,7 +21,7 @@ body{
 }
 
 .apresentacao_conteudo{
-    width: 593px;    /* height: 572px;*/
+    width: auto;    /* height: 572px;*/
     text-align: justify;
     flex-direction: column;
     gap: 40px;
@@ -57,8 +57,8 @@ body{
 }
 
 .imagemPrincipal{
-    width:280px;
-    height:300px;
+    width:35%;
+    height:/*300px*/ 25%;
     margin-left: 40px;
 }
 
@@ -95,11 +95,6 @@ body{
     color: #F6F6F6;
 }
 
-@media screen and (max-width: 600px) {
-    .livros-container {
-        justify-content: space-between; /* Alinha os livros lado a lado */
-    }
-}
 
 .quantidade{
     gap: 15px;
@@ -121,3 +116,24 @@ body{
     text-align: center;
 }
 
+@media screen and (max-width: 600px) /*(min-width: 480px ) and (max-width: 800px)*/ {  
+    .livros-container {
+        justify-content: space-between; /* Alinha os livros lado a lado */
+        justify-content: center; /* Centraliza os livros horizontalmente */
+        align-items: center;
+    }
+    .rodape{
+        justify-content: center;
+    }
+    .apresentacao{
+        padding: 5%;
+    }
+    .apresentacao_conteudo{
+        width: auto;
+    }
+    .imagemPrincipal{
+        padding: 5%;
+        width: 35%;
+        height: 25%;
+    }
+}
