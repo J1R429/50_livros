@@ -1,6 +1,6 @@
 
 // Exemplo de dados de livros (você pode substituir por seus próprios dados)
-const livros = [
+const livros= [
     {nome: "Prosperidade a Maneira de Deus-Wilson Oliveira da Silva", imagem: "imagens/1.png"},
     {nome: "O homem do Céu-Irmão Yun", imagem: "imagens/2.png"},
     {nome: "O vinho novo é melhor-Robert Tom", imagem: "imagens/3.png"},
@@ -50,16 +50,15 @@ const livros = [
     {nome: "Em busca de Deus -John Pipper", imagem: "imagens/47.png"},
     {nome: "Os segredos da mente milionária -T. Harv Eker", imagem: "imagens/48.png"},
     {nome: "Lealdade e Deslealdade -Dag Mills", imagem: "imagens/49.png"},
-    {nome: "A tríade do tempo-Christian Barbosa", imagem: "imagens/50.png"},
-      
-        
+    {nome: "A tríade do tempo-Christian Barbosa", imagem: "imagens/50.png"},         
 ];
+
 
 // Função para gerar os elementos HTML dinamicamente
 function gerarLivros() {
-    const livrosContainer = document.getElementById("livros");
+    const livrosContainer = document.getElementById("livrosContainer");
 
-    livros.forEach(livro => {
+    livros.forEach((livro, index) => {
         const livroDiv = document.createElement("div");
         livroDiv.classList.add("livro");
 
@@ -71,8 +70,13 @@ function gerarLivros() {
         nomeLivro.classList.add("nome-livro");
         nomeLivro.textContent = livro.nome;
 
+        const checkbox = document.createElement("input");
+        checkbox.type="checkbox";
+        checkbox.id='livro${index+1}';
+
         livroDiv.appendChild(imagem);
         livroDiv.appendChild(nomeLivro);
+        livroDiv.appendChild(checkbox);
 
         livrosContainer.appendChild(livroDiv);
     });
@@ -80,3 +84,40 @@ function gerarLivros() {
 
 // Chama a função para gerar os livros quando a página carregar
 window.onload = gerarLivros;
+
+
+
+
+// Função para verificar a quantidade de livros selecionados e exibir a mensagem de incentivo
+function selecionados() {
+    const checkboxes = document.querySelectorAll("input[type=checkbox]");
+    const livrosSelecionados = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+
+    const mensagem = document.getElementById("mensagem");
+    const quantidadeLivrosSelecionados = livrosSelecionados.length;
+
+    if (quantidadeLivrosSelecionados === 0) {
+        mensagem.textContent = "Selecione pelo menos um livro para começar.";
+    } 
+    else if (quantidadeLivrosSelecionados === 10){
+        mensagem.textContent = 'Você já selecionou ${quantidadeLivrosSelecionados} livros. Continue lendo!';
+    }
+    else if (quantidadeLivrosSelecionados === 20){
+        mensagem.textContent = 'Você já selecionou ${quantidadeLivrosSelecionados} livros. Aposto que você já percebeu mudanças, continue lendo!';
+    }
+    else if (quantidadeLivrosSelecionados === 30){
+        mensagem.textContent = 'Você já selecionou ${quantidadeLivrosSelecionados} livros. Não desista, continue lendo!';
+    }
+    else if (quantidadeLivrosSelecionados === 40){
+        mensagem.textContent = 'Você já selecionou ${quantidadeLivrosSelecionados} livros. Você está quase lá, continue lendo!';
+    }
+    else {
+        mensagem.textContent = "PARABÉNS! Você leu todos os livros da lista";
+    }
+    }
+    
+    
+    
+
+
+
