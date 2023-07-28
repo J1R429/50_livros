@@ -41,6 +41,7 @@ body{
     gap: 15px;
 }
 
+
 .botoes_1{
    /* background-color: #F7E911;*/
     color: #F6F6F6;
@@ -90,4 +91,12 @@ body{
     color: #F6F6F6;
 }
 
+.rodape{
+    padding: 12px;
+    color:#F6F6F6;
+    background-color: #28E83B;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
 

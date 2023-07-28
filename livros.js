@@ -100,19 +100,19 @@ function selecionados() {
         mensagem.textContent = "Selecione pelo menos um livro para começar.";
     } 
     else if (quantidadeLivrosSelecionados <= 10){
-        mensagem.textContent = "Você já selecionou" + quantidadeLivrosSelecionados + "livros. Continue lendo!";
+        mensagem.textContent = `Você já selecionou ${quantidadeLivrosSelecionados} livros. Continue lendo!`;
     }
     else if (quantidadeLivrosSelecionados <= 20){
-        mensagem.textContent = "Você já selecionou " + quantidadeLivrosSelecionados + "livros. Aposto que você já percebeu mudanças, continue lendo!";
+        mensagem.textContent = `Você já selecionou  ${quantidadeLivrosSelecionados} livros. Aposto que você já percebeu mudanças, continue lendo!`;
     }
     else if (quantidadeLivrosSelecionados <= 30){
-        mensagem.textContent = "Você já selecionou " + quantidadeLivrosSelecionados + "livros. Não desista, continue lendo!";
+        mensagem.textContent = `Você já selecionou ${quantidadeLivrosSelecionados} livros. Não desista, continue lendo!`;
     }
     else if (quantidadeLivrosSelecionados <= 40){
-        mensagem.textContent = "Você já selecionou " + quantidadeLivrosSelecionados + " livros. Nossa que maravilha, continue lendo!";
+        mensagem.textContent = `Você já selecionou ${quantidadeLivrosSelecionados} livros. Nossa que maravilha, continue lendo!`;
     }
     else if (quantidadeLivrosSelecionados < 50){
-        mensagem.textContent = "Você já selecionou " + quantidadeLivrosSelecionados+ " livros. Você está quase lá, continue lendo!";
+        mensagem.textContent = `Você já selecionou ${quantidadeLivrosSelecionados} livros. Você está quase lá, continue lendo!`;
     }
     else {
         mensagem.textContent = "PARABÉNS! Você leu todos os livros da lista";
